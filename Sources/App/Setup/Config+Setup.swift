@@ -1,6 +1,8 @@
+import Bugsnag
+import JWTKeychain
+import LeafProvider
 import MySQLProvider
 import RedisProvider
-import Bugsnag
 
 extension Config {
     public func setup() throws {
@@ -19,6 +21,8 @@ extension Config {
         try addProvider(MySQLProvider.Provider.self)
         try addProvider(RedisProvider.Provider.self)
         try addProvider(Bugsnag.Provider.self)
+        try addProvider(JWTKeychain.Provider.self)
+        try addProvider(LeafProvider.Provider.self)
     }
 
     /// Configre middlewares

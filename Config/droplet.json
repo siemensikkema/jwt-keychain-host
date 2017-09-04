@@ -44,5 +44,11 @@
     "//": "prepare: Supplied by the Fluent provider. Prepares the database (configure in fluent.json)",
     "commands": [
         "prepare"
-    ]
+    ],
+
+    "//": "Use Mailgun for sending emails. See 'mailgun.json'.",
+    "mail": "mailgun",
+
+    "//": "Use Leaf for rendering views.",
+    "view": "leaf"
 }

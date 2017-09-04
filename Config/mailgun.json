@@ -1,0 +1,4 @@
+{
+    "domain": "$MAILGUN_DOMAIN:mg.like.st",
+    "key": "$MAILGUN_PASSWORD"
+}

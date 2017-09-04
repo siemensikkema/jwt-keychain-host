@@ -2,6 +2,6 @@
     "hostname": "$DATABASE_HOSTNAME:127.0.0.1",
     "user": "$DATABASE_USER:root",
     "password": "$DATABASE_PASSWORD:root",
-    "database": "$DATABASE_DB:my-project",
+    "database": "$DATABASE_DB:jwt-keychain-host",
     "encoding": "utf8mb4"
 }

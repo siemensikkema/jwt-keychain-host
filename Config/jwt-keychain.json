@@ -1,0 +1,18 @@
+{
+    "apiAccess": {
+        "kid": "access",
+        "secondsToExpire": 3600,
+    },
+    "refreshToken": {
+        "kid": "refresh",
+        "secondsToExpire": 31536000
+    },
+    "resetPassword": {
+        "kid": "reset",
+        "secondsToExpire": 3600,
+        "fromName": "Name of Sender",
+        "fromAddress": "sender@email.com",
+        "pathToEmail": "Emails/resetPassword",
+        "pathToView": "Views/resetPassword"
+    }
+}

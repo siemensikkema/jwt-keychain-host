@@ -1,0 +1,19 @@
+{
+    "signers": {
+        "access": {
+            "type": "hmac",
+            "algorithm": "hs256",
+            "key": "yourkeyhere"
+        },
+        "refresh": {
+            "type": "hmac",
+            "algorithm": "hs256",
+            "key": "yourkeyhere"
+        },
+        "reset": {
+            "type": "hmac",
+            "algorithm": "hs256",
+            "key": "yourkeyhere"
+        }
+    }
+}
