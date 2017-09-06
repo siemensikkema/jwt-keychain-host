@@ -1,6 +1,7 @@
 import Authentication
 import BCrypt
 import Fluent
+import HTTP
 import JSON
 import JWT
 import JWTKeychain
@@ -40,21 +41,14 @@ extension User: JSONRepresentable {
 // MARK: JWTKeychainAuthenticatable
 
 extension User: JWTKeychainAuthenticatable {
-
 }
 
-// MARK: P
+// MARK: PasswordUpdateable
 
-extension User: P {
-    convenience init(email: Valid<UniqueEmail>, name: Valid<Name>?, password: HashedPassword) throws {
-        self.init()
-    }
-
-    func update(email: Valid<UniqueEmail>?, name: Valid<Name>?, password: HashedPassword?) throws {
+extension User: PasswordUpdateable {
+    func updatePassword(to: String) throws {
 
     }
-
-    static let passwordHasher: HashProtocol = BCryptHasher(cost: 5)
 }
 
 // MARK: NodeRepresentable
@@ -101,6 +95,20 @@ extension User: Preparation {
     }
 
     static func revert(_ database: Database) throws {
+
+    }
+}
+
+// MARK: RequestInitializable
+
+extension User: RequestInitializable {
+    convenience init(request: Request) throws {
+        self.init()
+    }
+}
+
+extension User: RequestUpdateable {
+    func update(request: Request) throws {
 
     }
 }
