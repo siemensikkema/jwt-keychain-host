@@ -10,9 +10,15 @@
     "resetPassword": {
         "kid": "reset",
         "secondsToExpire": 3600,
-        "fromName": "Name of Sender",
-        "fromAddress": "sender@email.com",
-        "pathToEmail": "Emails/resetPassword",
-        "pathToView": "Views/resetPassword"
-    }
+    },
+    "fromName": "Name of Sender",
+    "fromAddress": "sender@email.com",
+
+    "pathToEmailView": "Emails/resetPassword",
+    "pathToFormView": "Views/resetPassword",
+
+    "apiPathPrefix": "api",
+    "frontendPathPrefix": "frontend",
+    
+    "bCryptCost": 1
 }
