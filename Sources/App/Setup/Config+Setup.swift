@@ -12,8 +12,6 @@ extension Config {
 
         try setupProviders()
         try setupMiddlewares()
-        try setupPreparations()
-        try setupCommands()
     }
     
     /// Configure providers
@@ -28,16 +26,5 @@ extension Config {
     /// Configre middlewares
     private func setupMiddlewares() throws {
         addConfigurable(middleware: Bugsnag.Middleware.init, name: "bugsnag")
-    }
-    
-    /// Add all models that should have their
-    /// schemas prepared before the app boots
-    private func setupPreparations() throws {
-        preparations.append(Post.self)
-    }
-
-    /// Configure commands
-    private func setupCommands() throws {
-        // Add commands here by calling addConfigurable()
     }
 }
